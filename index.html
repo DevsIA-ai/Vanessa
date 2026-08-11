@@ -215,13 +215,13 @@ body { font-family: var(--sans); background: var(--cream); color: var(--text); o
    COUNTDOWN — RING CLOCK
    ============================== */
 #countdown {
-  background:linear-gradient(135deg,#3a1420 0%,#7a2438 100%);
+  background:linear-gradient(135deg,#3a1018 0%,#8a2030 100%);
   padding:5rem 2rem; text-align:center; position:relative; overflow:hidden;
 }
 #countdown::before {
   content:''; position:absolute; inset:0; pointer-events:none;
   background:
-    radial-gradient(circle at 20% 50%,rgba(122,35,56,.18) 0%,transparent 50%),
+    radial-gradient(circle at 20% 50%,rgba(138,32,48,.18) 0%,transparent 50%),
     radial-gradient(circle at 80% 50%,rgba(201,169,110,.08) 0%,transparent 50%);
 }
 .cd-label {
@@ -244,9 +244,9 @@ body { font-family: var(--sans); background: var(--cream); color: var(--text); o
   transform:rotate(-90deg);
 }
 .ring-bg   { fill:none; stroke:rgba(255,255,255,.05); stroke-width:5; }
-.ring-track{ fill:none; stroke:rgba(122,35,56,.28); stroke-width:5; }
+.ring-track{ fill:none; stroke:rgba(138,32,48,.28); stroke-width:5; }
 .ring-arc  {
-  fill:none; stroke:#8a2340; stroke-width:5; stroke-linecap:round;
+  fill:none; stroke:#9c2438; stroke-width:5; stroke-linecap:round;
   stroke-dasharray:276.46; stroke-dashoffset:276.46;
   transition:stroke-dashoffset 1s ease;
 }
@@ -266,7 +266,7 @@ body { font-family: var(--sans); background: var(--cream); color: var(--text); o
 .cd-sep {
   font-family:var(--serif);
   font-size:clamp(1.5rem,4vw,2.5rem);
-  color:rgba(180,70,95,.75); font-style:italic;
+  color:rgba(190,60,70,.75); font-style:italic;
   padding-bottom:1.8rem;
 }
 
@@ -274,7 +274,7 @@ body { font-family: var(--sans); background: var(--cream); color: var(--text); o
    FAMILIA
    ============================== */
 #familia {
-  background:linear-gradient(160deg,#3a1420,#7a2438);
+  background:linear-gradient(160deg,#3a1018,#8a2030);
   position:relative; overflow:hidden;
 }
 #familia::before {
@@ -301,7 +301,19 @@ body { font-family: var(--sans); background: var(--cream); color: var(--text); o
 /* ==============================
    DETAILS
    ============================== */
-#details { background:linear-gradient(160deg,#fdf6f3,var(--warm)); }
+#details {
+  background:linear-gradient(160deg,#3a1018,#8a2030);
+  position:relative; overflow:hidden;
+}
+#details::before {
+  content:''; position:absolute; inset:0; pointer-events:none;
+  background:
+    radial-gradient(circle at 15% 10%,rgba(216,143,168,.12) 0%,transparent 45%),
+    radial-gradient(circle at 85% 90%,rgba(201,169,110,.08) 0%,transparent 45%);
+}
+#details .container { position:relative; z-index:1; }
+#details .section-title { color:#fff; }
+#details .section-title em { color:var(--gold-light); }
 .detail-cards {
   display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
   gap:1.5rem; margin:3rem 0;
@@ -499,7 +511,7 @@ body { font-family: var(--sans); background: var(--cream); color: var(--text); o
    RSVP
    ============================== */
 #rsvp {
-  background:linear-gradient(160deg,#3a1420,#7a2438);
+  background:linear-gradient(160deg,#3a1018,#8a2030);
   text-align:center; position:relative; overflow:hidden;
 }
 #rsvp::before {
@@ -547,7 +559,7 @@ body { font-family: var(--sans); background: var(--cream); color: var(--text); o
 
 /* FOOTER */
 footer {
-  background:linear-gradient(135deg,#3a1420,#200a0c);
+  background:linear-gradient(135deg,#3a1018,#220a0a);
   text-align:center; padding:4rem 2rem;
 }
 .footer-names {
@@ -565,7 +577,7 @@ footer {
    ============================== */
 #env-overlay {
   position:fixed; inset:0; z-index:9999;
-  background:radial-gradient(circle at 30% 20%,#701f34 0%,#3a0f18 55%,#1a0709 100%);
+  background:radial-gradient(circle at 30% 20%,#7e1f2c 0%,#3a0f14 55%,#1c0708 100%);
   display:flex; align-items:center; justify-content:center;
   transition:opacity .7s ease;
 }
@@ -982,10 +994,10 @@ body.env-open { overflow:hidden; }
     </div>
 
     <!-- MAP: Iglesia -->
-    <p style="font-family:var(--serif);font-size:1.1rem;color:var(--text-muted);margin:2.5rem 0 .75rem;text-align:center">
+    <p style="font-family:var(--serif);font-size:1.1rem;color:#fff;margin:2.5rem 0 .75rem;text-align:center">
       <em>Parroquia de Santa María de Guadalupe</em>
     </p>
-    <p style="font-size:.78rem;color:var(--text-muted);margin-bottom:.75rem;text-align:center">
+    <p style="font-size:.78rem;color:rgba(255,255,255,.7);margin-bottom:.75rem;text-align:center">
       Atlacomulco · 13:00 hrs
     </p>
     <div class="map-box reveal">
@@ -1010,10 +1022,10 @@ body.env-open { overflow:hidden; }
     </div>
 
     <!-- MAP: Salón -->
-    <p style="font-family:var(--serif);font-size:1.1rem;color:var(--text-muted);margin:2.5rem 0 .75rem;text-align:center">
+    <p style="font-family:var(--serif);font-size:1.1rem;color:#fff;margin:2.5rem 0 .75rem;text-align:center">
       <em>Salón Cristal</em>
     </p>
-    <p style="font-size:.78rem;color:var(--text-muted);margin-bottom:.75rem;text-align:center">
+    <p style="font-size:.78rem;color:rgba(255,255,255,.7);margin-bottom:.75rem;text-align:center">
       Atlacomulco · 15:00 hrs
     </p>
     <div class="map-box reveal">
@@ -1059,7 +1071,7 @@ body.env-open { overflow:hidden; }
       <span>⚠ Por favor evita estos colores · reservados para la quinceañera</span>
       <div class="avoid-swatches">
         <div class="swatch">
-          <div class="swatch-circle" style="background:#7a2438"></div>
+          <div class="swatch-circle" style="background:#8a2030"></div>
           <span class="swatch-name">Vino</span>
         </div>
         <div class="swatch">
